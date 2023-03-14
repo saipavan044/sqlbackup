@@ -34,7 +34,8 @@ function source_backup {
         ts=$(date +%F)
         read -p "Enter repo name of your project: " name
         tar -cf ${ts}.tar  "$name.git"
-        sudo mv *.tar /home/ubuntu/var/www/$direc
+	echo "pwd"
+        sudo mv *.tar var/www/task/$direc
         sudo apt-get install git
         read -p "Enter your github username: " user
         read -p "Enter your repo name to store the backup file: " repo
